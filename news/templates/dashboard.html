@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        {% for  header, description, image in my_list %}
+
+        <div class="card border-primary mb-3">
+            <img src="{{image}}" alt="image">
+        </div>
+
+        
+        <div class="card border-primary mb-3">
+            <h4><span class="badge badge-primary">HEADLINE</span></h4>
+            <h5>{{header}}{{ value|linebreaks }}</h5>
+            <h4><span class="badge badge-success">DESCRIPTION</span></h4>
+            <h5>{{description}}{{value|linebreaks}}</h5>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock content %}
